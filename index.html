@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <h2 class="heading">PASSWORD GENERATOR</h2>
+      <div class="password-container box">
+        <p class="pass-para">PASSWORD</p>
+        <div class="text">
+          <span class="copyText" copiedMsg>Copied</span>
+          <i class="fa-regular fa-copy copy-btn" copyIcon></i>
+        </div>
+      </div>
+
+      <div class="pass-generator-container">
+        <div class="length-container box">
+          <span>Password Length</span>
+          <span class="pass-length">4</span>
+        </div>
+        <div class="range-slider">
+          <input
+            type="range"
+            name="pass-length"
+            id="range"
+            min="1"
+            max="16"
+            value="4"
+          />
+        </div>
+
+        <ul class="list">
+          <li>
+            <input
+              type="checkbox"
+              class="checkBoxes"
+              id="uppercase"
+              checked="checked"
+            />
+            <label for="uppercase">Include Uppercase Letters</label>
+          </li>
+          <li>
+            <input type="checkbox" class="checkBoxes" id="lowercase" />
+            <label for="lowercase">Include Lowercase Letters</label>
+          </li>
+          <li>
+            <input type="checkbox" class="checkBoxes" id="numbers" />
+            <label for="numbers">Include Numbers</label>
+          </li>
+          <li>
+            <input type="checkbox" class="checkBoxes" id="symbols" />
+            <label for="symbols">Include Symbols</label>
+          </li>
+        </ul>
+
+        <div class="pass-strength box">
+          <p>Strength</p>
+          <div class="indicator"></div>
+        </div>
+
+        <button class="generate-btn">GENERATE PASSWORD</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
